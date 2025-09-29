@@ -21,7 +21,7 @@ const About = () => {
           <ScrollAnimation animation="fade-in-left" delay={0.1}>
             <div className="about-text">
               <div className="about-intro">
-                <h3>5+ Years of Excellence in Food Export</h3>
+                <h3>5+ Years of Excellence in Food Export</h3>                                  
                 <p>
                   Based in Vapi, Gujarat, we specialize in exporting premium quality onion powder, 
                   garlic powder, and food chips to over 50 countries worldwide. Our commitment to 
