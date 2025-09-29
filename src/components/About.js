@@ -21,12 +21,7 @@ const About = () => {
           <ScrollAnimation animation="fade-in-left" delay={0.1}>
             <div className="about-text">
               <div className="about-intro">
-                <h3>15+ Years of Excellence in Food Export</h3>
-                <p>
-                  Founded by <strong>Paras Vaghasiya</strong> and <strong>Nikunj Vaghasiya</strong>, 
-                  and led by CEO <strong>Kishan Vaghasiya</strong>, Skytech International has been 
-                  at the forefront of India's food export industry since 2008.
-                </p>
+                <h3>5+ Years of Excellence in Food Export</h3>
                 <p>
                   Based in Vapi, Gujarat, we specialize in exporting premium quality onion powder, 
                   garlic powder, and food chips to over 50 countries worldwide. Our commitment to 

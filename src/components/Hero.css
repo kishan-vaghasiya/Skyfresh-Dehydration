@@ -380,8 +380,14 @@
     padding: 0.4rem 0.8rem;
     color: #87ceeb !important;
     font-weight: 500;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: none; /* keep simple on mobile */
     white-space: nowrap;
+  }
+  
+  /* Disable hover effects on mobile for simpler look */
+  .feature-item:hover {
+    background: transparent;
+    transform: none;
   }
   
   .floating-products {
@@ -415,24 +421,75 @@
     opacity: 0.03;
   }
   
+  /* Re-enable background animations on mobile */
   .floating-shapes {
-    display: none;
+    display: block;
   }
   
   .floating-particles {
-    display: none;
+    display: block;
   }
   
   .connection-lines {
-    display: none;
+    display: block;
   }
   
   .floating-containers {
-    display: none;
+    display: block;
   }
   
   .floating-flags {
-    display: none;
+    display: block;
+  }
+
+  /* Mobile animation tuning for smoothness and clarity */
+  .hero-background {
+    animation: bgEnter 900ms ease-out both;
+  }
+
+  .world-map {
+    width: 300px;
+    height: 300px;
+    opacity: 0.08; /* slightly more visible on mobile */
+  }
+
+  .world-globe {
+    animation-duration: 60s; /* slower rotation on mobile */
+  }
+
+  .particle {
+    opacity: 0.6;
+    box-shadow: 0 0 6px rgba(14, 165, 233, 0.7);
+    animation-duration: 10s; /* smoother */
+  }
+
+  .line {
+    opacity: 0.2;
+    animation-duration: 5s;
+  }
+
+  .shape {
+    animation-duration: 8s; /* gentler float */
+  }
+
+  /* Mobile-optimized container and flag animations */
+  .mini-container {
+    width: 30px;
+    height: 20px;
+    animation-duration: 6s;
+    opacity: 0.7;
+  }
+
+  .mini-flag {
+    font-size: 0.9rem;
+    width: 20px;
+    height: 15px;
+    animation-duration: 7s;
+    opacity: 0.8;
+  }
+
+  .container-icon {
+    font-size: 1rem;
   }
 }
 
@@ -498,6 +555,31 @@
   }
   
   .feature-icon {
+    font-size: 0.9rem;
+  }
+
+  /* Slightly reduce intensity further for very small screens */
+  .particle { animation-duration: 12s; opacity: 0.55; }
+  .line { opacity: 0.18; animation-duration: 5.5s; }
+  .shape { animation-duration: 9s; }
+  
+  /* Keep emoji animations visible on small screens */
+  .mini-container {
+    width: 25px;
+    height: 18px;
+    animation-duration: 8s;
+    opacity: 0.6;
+  }
+
+  .mini-flag {
+    font-size: 0.8rem;
+    width: 18px;
+    height: 14px;
+    animation-duration: 9s;
+    opacity: 0.7;
+  }
+
+  .container-icon {
     font-size: 0.9rem;
   }
 }
@@ -782,6 +864,10 @@
 }
 
 /* New Animations */
+@keyframes bgEnter {
+  from { opacity: 0; transform: scale(1.02); }
+  to { opacity: 1; transform: scale(1); }
+}
 @keyframes rotateGlobe {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -981,5 +1067,13 @@
   }
   75% {
     transform: translateY(-15px) translateX(8px);
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero *, .hero-background * {
+    animation: none !important;
+    transition: none !important;
   }
 }
