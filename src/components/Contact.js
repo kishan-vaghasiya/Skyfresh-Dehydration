@@ -65,9 +65,8 @@ const Contact = () => {
                   <div className="contact-icon">👥</div>
                   <h3>Contact Persons</h3>
                   <div className="contact-details">
-                    <p><strong>Paras Vaghasiya</strong></p>
-                    <p><strong>Nikunj Vaghasiya</strong></p>
                     <p><strong>Kishan Vaghasiya</strong></p>
+                    <p><strong>Harsh Gadhesariya</strong></p>
                   </div>
                 </div>
               </ScrollAnimation>
