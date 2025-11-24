@@ -1,6 +1,6 @@
 /* Stats Section */
 .stats-section {
-  background: linear-gradient(135deg, #0ea5e9, #0284c7, #0369a1);
+  background: linear-gradient(135deg, #0c2416, #1f5d33, #f4c430);
   background-size: 400% 400%;
   animation: gradientShift 8s ease infinite;
   padding: 5rem 0;

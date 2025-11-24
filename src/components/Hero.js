@@ -19,16 +19,12 @@ const Hero = () => {
           </h1>
           <p className="hero-subtitle">
             Leading exporter of high-quality onion powder, garlic powder, and premium food chips to 50+ countries. 
-            <strong> 15+ years of excellence</strong> in food export industry.
+            <strong> 5+ years of excellence</strong> in food export industry.
           </p>
           <div className="hero-features">
             <div className="feature-item">
               <span className="feature-icon">✅</span>
               <span>ISO Certified Quality</span>
-            </div>
-            <div className="feature-item">
-              <span className="feature-icon">🚢</span>
-              <span>Global Shipping</span>
             </div>
             <div className="feature-item">
               <span className="feature-icon">🌱</span>

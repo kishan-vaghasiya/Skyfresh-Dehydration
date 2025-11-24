@@ -106,7 +106,7 @@
   border-radius: 16px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   margin-bottom: 2rem;
-  border: 1px solid rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(45, 106, 79, 0.12);
 }
 
 .company-timeline h4 {
@@ -128,7 +128,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, #0ea5e9, #0284c7);
+  background: linear-gradient(180deg, var(--color-green), var(--color-yellow));
 }
 
 .timeline-item {
@@ -144,17 +144,17 @@
   top: 8px;
   width: 16px;
   height: 16px;
-  background: #0ea5e9;
+  background: var(--color-yellow);
   border-radius: 50%;
   border: 3px solid white;
-  box-shadow: 0 0 0 3px #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(244, 196, 48, 0.35);
 }
 
 .timeline-year {
   position: absolute;
   left: -2rem;
   top: 0;
-  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  background: linear-gradient(135deg, var(--color-green), var(--color-yellow));
   color: white;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
@@ -181,7 +181,7 @@
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(45, 106, 79, 0.12);
 }
 
 .leadership-team h4 {
@@ -206,7 +206,7 @@
 }
 
 .team-member:hover {
-  background: rgba(14, 165, 233, 0.05);
+  background: rgba(45, 106, 79, 0.07);
   transform: translateY(-3px);
 }
 
@@ -242,7 +242,7 @@
   text-align: center;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  border: 1px solid rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(45, 106, 79, 0.12);
 }
 
 .stat-card:hover {
@@ -253,7 +253,7 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #0ea5e9;
+  color: var(--color-green);
   margin-bottom: 0.5rem;
 }
 

@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="footer-section">
             <div className="footer-logo">
               <img src={imgPath.logo1} alt="SkyTech Food Export" className="footer-logo-img" />
-              <span>Skytech International food supplies</span>
+              <span>SkyFresh Dehydration</span>
             </div>
             <p className="footer-description">
               Leading exporter of premium food products to 50+ countries worldwide. 
@@ -55,8 +55,8 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Contact Info</h3>
             <div className="contact-info">
-              <p>📧 skytechinternational@gmail.com</p>
-              <p>📍 Vapi, Dist. Valsad, Gujarat, India</p>
+              <p>📧 skyfresh@gmail.com</p>
+              <p>📍 Ahemdabad,Gujarat</p>
               <p>🌍 Exporting to 50+ countries</p>
             </div>
           </div>

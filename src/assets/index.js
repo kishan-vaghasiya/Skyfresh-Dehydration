@@ -1,6 +1,6 @@
 export const imgPath = {
     
-    logo:require('./Images/Logo.png'),
-    logo1:require('./Images/white.png')
+    logo:require('./Images/Logo2.png'),
+    logo1:require('./Images/Logo2.png')
 
 }

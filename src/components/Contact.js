@@ -27,7 +27,6 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
@@ -87,8 +86,7 @@ const Contact = () => {
                 <div className="contact-icon">📍</div>
                 <h3>Address</h3>
                 <div className="contact-details">
-                  <p>Shop. 04, Nityananda Co.</p>
-                  <p>Vapi, Dist. Valsad</p>
+                  <p>Ahemdabad</p>
                   <p>Gujarat, India</p>
                 </div>
               </div>
@@ -246,7 +244,7 @@ const Contact = () => {
           <div className="map-container">
             <div className="map-placeholder">
               <div className="map-icon">🗺️</div>
-              <p>Vapi, Dist. Valsad, Gujarat</p>
+              <p>Ahemdabad, Gujarat</p>
               <p>India</p>
             </div>
           </div>

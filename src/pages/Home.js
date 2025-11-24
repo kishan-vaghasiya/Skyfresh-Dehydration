@@ -18,7 +18,6 @@ const Home = () => {
       <About />
       <Certifications />
       <Products />
-      <Testimonials />
       <Shipping />
       <Stats />
       <Contact />

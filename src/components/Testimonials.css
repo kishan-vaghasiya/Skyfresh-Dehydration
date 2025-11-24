@@ -1,7 +1,7 @@
 /* Testimonials Section */
 .testimonials-section {
   padding: 100px 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: linear-gradient(160deg, rgba(244, 196, 48, 0.08), rgba(125, 187, 99, 0.08));
   position: relative;
   overflow: hidden;
 }
@@ -34,8 +34,8 @@
   background: white;
   padding: 3rem;
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(14, 165, 233, 0.1);
+  box-shadow: 0 15px 40px rgba(31, 67, 50, 0.08);
+  border: 1px solid rgba(45, 106, 79, 0.12);
   transition: all 0.3s ease;
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -62,13 +62,13 @@
   font-size: 3rem;
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  background: linear-gradient(135deg, var(--color-green), var(--color-yellow));
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+  box-shadow: 0 4px 15px rgba(31, 67, 50, 0.2);
 }
 
 .client-details h4 {
@@ -80,7 +80,7 @@
 
 .client-company {
   font-size: 1rem;
-  color: #0ea5e9;
+  color: var(--color-green);
   margin-bottom: 0.2rem;
   font-weight: 500;
 }
@@ -91,7 +91,7 @@
 }
 
 .product-badge {
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: linear-gradient(135deg, var(--color-green), var(--color-yellow));
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -127,7 +127,7 @@
 .testimonial-text::before {
   content: '"';
   font-size: 4rem;
-  color: #0ea5e9;
+  color: rgba(244, 196, 48, 0.6);
   position: absolute;
   top: -1rem;
   left: -1rem;
@@ -143,7 +143,7 @@
 }
 
 .carousel-btn {
-  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  background: linear-gradient(135deg, var(--color-green), var(--color-yellow));
   color: white;
   border: none;
   width: 50px;
@@ -160,7 +160,7 @@
 
 .carousel-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+  box-shadow: 0 4px 15px rgba(31, 67, 50, 0.25);
 }
 
 .carousel-btn:disabled {
@@ -185,12 +185,12 @@
 }
 
 .dot.active {
-  background: #0ea5e9;
+  background: var(--color-green);
   transform: scale(1.2);
 }
 
 .dot:hover {
-  background: #0ea5e9;
+  background: var(--color-yellow);
 }
 
 .testimonials-stats {
@@ -205,9 +205,9 @@
   padding: 2rem;
   border-radius: 16px;
   text-align: center;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 25px rgba(31, 67, 50, 0.08);
   transition: all 0.3s ease;
-  border: 1px solid rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(45, 106, 79, 0.12);
 }
 
 .stat-item:hover {
@@ -223,7 +223,7 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #0ea5e9;
+  color: var(--color-green);
   margin-bottom: 0.5rem;
 }
 
@@ -237,8 +237,8 @@
   background: white;
   padding: 3rem;
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(14, 165, 233, 0.1);
+  box-shadow: 0 15px 40px rgba(31, 67, 50, 0.08);
+  border: 1px solid rgba(45, 106, 79, 0.12);
   margin-top: 4rem;
 }
 
@@ -259,14 +259,14 @@
 .logo-item {
   text-align: center;
   padding: 1.5rem;
-  background: #f8fafc;
+  background: rgba(244, 196, 48, 0.08);
   border-radius: 12px;
   transition: all 0.3s ease;
-  border: 1px solid rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(45, 106, 79, 0.1);
 }
 
 .logo-item:hover {
-  background: rgba(14, 165, 233, 0.05);
+  background: rgba(125, 187, 99, 0.08);
   transform: translateY(-3px);
 }
 

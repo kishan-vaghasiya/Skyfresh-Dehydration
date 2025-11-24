@@ -23,7 +23,7 @@ const About = () => {
               <div className="about-intro">
                 <h3>5+ Years of Excellence in Food Export</h3>                                  
                 <p>
-                  Based in Vapi, Gujarat, we specialize in exporting premium quality onion powder, 
+                  Based in Ahemdabad, Gujarat, we specialize in exporting premium quality onion powder, 
                   garlic powder, and food chips to over 50 countries worldwide. Our commitment to 
                   quality, reliability, and customer satisfaction has made us a trusted partner 
                   for 1000+ clients globally.
@@ -58,44 +58,7 @@ const About = () => {
             </div>
           </ScrollAnimation>
 
-          <ScrollAnimation animation="fade-in-right" delay={0.2}>
-            <div className="about-visual">
-              <div className="company-timeline">
-                <h4>Our Journey</h4>
-                <div className="timeline">
-                  <div className="timeline-item">
-                    <div className="timeline-year">2008</div>
-                    <div className="timeline-content">
-                      <h5>Company Founded</h5>
-                      <p>Started with a vision to export premium Indian food products globally</p>
-                    </div>
-                  </div>
-                  <div className="timeline-item">
-                    <div className="timeline-year">2012</div>
-                    <div className="timeline-content">
-                      <h5>First International Client</h5>
-                      <p>Successfully exported to our first international market</p>
-                    </div>
-                  </div>
-                  <div className="timeline-item">
-                    <div className="timeline-year">2018</div>
-                    <div className="timeline-content">
-                      <h5>500+ Clients Milestone</h5>
-                      <p>Reached 500+ satisfied clients across 30+ countries</p>
-                    </div>
-                  </div>
-                  <div className="timeline-item">
-                    <div className="timeline-year">2023</div>
-                    <div className="timeline-content">
-                      <h5>1000+ Clients & 50+ Countries</h5>
-                      <p>Expanded to 50+ countries with 1000+ happy clients worldwide</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </ScrollAnimation>
+         
         </div>
 
         <ScrollAnimation animation="fade-in-up" delay={0.3}>

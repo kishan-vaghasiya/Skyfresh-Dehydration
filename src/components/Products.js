@@ -18,6 +18,8 @@ const Products = () => {
       name: "Onion Powder",
       icon: "🧅",
       badge: "Best Seller",
+      category: "Dehydrated Powders",
+      tags: ["Steam dried", "40-60 mesh", "Bulk ready"],
       bgClass: "onion-bg",
       description: "Premium quality dehydrated onion powder with natural flavor and aroma. Perfect for food processing, seasoning, and culinary applications.",
       specs: {
@@ -40,6 +42,8 @@ const Products = () => {
       name: "Garlic Powder",
       icon: "🧄",
       badge: "Premium",
+      category: "Dehydrated Powders",
+      tags: ["Allicin rich", "Gluten free", "Fine grind"],
       bgClass: "garlic-bg",
       description: "Finely ground garlic powder with intense flavor and health benefits. Rich in antioxidants and perfect for global food markets.",
       specs: {
@@ -62,6 +66,8 @@ const Products = () => {
       name: "Premium Food Chips",
       icon: "🥔",
       badge: "New",
+      category: "Snacking Range",
+      tags: ["5+ flavors", "OEM packs", "Air crisp"],
       bgClass: "chips-bg",
       description: "Crunchy and delicious food chips made from finest ingredients. Available in multiple flavors and bulk packaging options.",
       specs: {
@@ -78,6 +84,78 @@ const Products = () => {
       detailedDescription: "Our premium food chips are crafted using the finest ingredients and cutting-edge manufacturing techniques. Available in various flavors including classic salted, spicy, cheese, and exotic flavors. Perfect for snacks, accompaniments, and food service applications.",
       applications: ["Snack Industry", "Food Service", "Retail Markets", "Export Markets"],
       certifications: ["FSSAI", "ISO 22000", "HACCP", "Export Quality"]
+    },
+    {
+      id: 4,
+      name: "Artisan Peanut Butter",
+      icon: "🥜",
+      badge: "Energy Rich",
+      category: "Nut & Protein Spreads",
+      tags: ["25g protein", "Palm-oil free", "Creamy & crunchy"],
+      bgClass: "peanut-bg",
+      description: "Slow-roasted peanuts stone-ground into silky spreads. Available in creamy and crunchy variants suitable for retail jars and food service tubs.",
+      specs: {
+        protein: "25g / 100g",
+        texture: "Smooth | Crunchy",
+        shelfLife: "18 months"
+      },
+      features: [
+        "100% Roasted Peanuts",
+        "Zero Palm Oil & Fillers",
+        "High Protein Energy",
+        "Retail & HoReCa Packs"
+      ],
+      detailedDescription: "We craft peanut butter in micro-batches to lock in aroma while maintaining export grade stability. Natural sweetness, optional organic jaggery, and customized viscosity make it ideal for quick-service restaurants, bakeries, and health brands.",
+      applications: ["Retail & Private Label", "Food Service", "Bakery Fillings", "Sports Nutrition"],
+      certifications: ["FSSAI", "ISO 22000", "US FDA", "Vegan Friendly"]
+    },
+    {
+      id: 5,
+      name: "Signature Spice Collection",
+      icon: "🧂",
+      badge: "Chef's Pick",
+      category: "Spices & Seasonings",
+      tags: ["Steam sterilized", "Global grades", "Custom blends"],
+      bgClass: "spice-bg",
+      description: "Handpicked Indian spices including turmeric, cumin, chili, coriander, and bespoke masala blends curated for export grade consistency.",
+      specs: {
+        varieties: "15+ Spices",
+        sterilization: "Steam & ETO",
+        shelfLife: "24 months"
+      },
+      features: [
+        "Colour-Locked Milling",
+        "Custom Heat Profiles",
+        "Private Label Friendly",
+        "Ready-to-Fill Packaging"
+      ],
+      detailedDescription: "Our spice house sources directly from GAP-certified farms. Small-batch roasting and cryogenic grinding retain volatile oils, ensuring vibrant color and aroma across spice powders, whole spices, and ready blends.",
+      applications: ["Retail Packs", "Seasoning Plants", "Ready Meal Units", "Snack Manufacturers"],
+      certifications: ["FSSAI", "BRCGS", "HALAL", "US FDA"]
+    },
+    {
+      id: 6,
+      name: "Protein-Rich Beans",
+      icon: "🫘",
+      badge: "Protein Boost",
+      category: "Beans & Pulses",
+      tags: ["Kidney & chickpea", "Color sorted", "50kg sacks"],
+      bgClass: "beans-bg",
+      description: "Export-grade beans including kidney, black, chickpea, and navy beans sourced from traceable farms with strict moisture control.",
+      specs: {
+        varieties: "6+ Types",
+        moisture: "≤ 12%",
+        packaging: "25kg | 50kg"
+      },
+      features: [
+        "Double Sortex Cleaned",
+        "Residue Controlled",
+        "Nutrient Dense",
+        "Flexible Contracting"
+      ],
+      detailedDescription: "Our beans undergo triple-stage cleaning, size grading, and metal detection. Customized moisture barriers and fumigation meet long-haul export demands while preserving freshness.",
+      applications: ["Canning Units", "Retail Packs", "Ready Meals", "Bulk Traders"],
+      certifications: ["FSSAI", "ISO 22000", "APEDA", "USDA Organic"]
     }
   ];
 
@@ -107,9 +185,17 @@ const Products = () => {
                 <div className="product-image">
                   <div className={`product-bg ${product.bgClass}`}></div>
                   <div className="product-icon-large">{product.icon}</div>
-                  <div className="product-badge">{product.badge}</div>
+                  <span className="product-floating-badge">{product.badge}</span>
                 </div>
                 <div className="product-content">
+                  <div className="product-meta">
+                    <span className="product-category">{product.category}</span>
+                    <div className="product-tags">
+                      {product.tags.slice(0, 3).map((tag) => (
+                        <span key={tag} className="product-tag">{tag}</span>
+                      ))}
+                    </div>
+                  </div>
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
                   <div className="product-specs">
@@ -158,6 +244,7 @@ const Products = () => {
                 <div className="product-badge">{selectedProduct.badge}</div>
               </div>
               <div className="modal-title-section">
+                <span className="modal-category-chip">{selectedProduct.category}</span>
                 <h2 className="modal-title">{selectedProduct.name}</h2>
                 <p className="modal-description">{selectedProduct.description}</p>
               </div>
@@ -193,6 +280,17 @@ const Products = () => {
                   ))}
                 </ul>
               </div>
+
+              {selectedProduct.tags && (
+                <div className="modal-section">
+                  <h3>Quick Tags</h3>
+                  <div className="modal-tags">
+                    {selectedProduct.tags.map((tag) => (
+                      <span key={tag} className="modal-tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="modal-section">
                 <h3>Applications</h3>
