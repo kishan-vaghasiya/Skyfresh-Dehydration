@@ -23,10 +23,6 @@ const Hero = () => {
           </p>
           <div className="hero-features">
             <div className="feature-item">
-              <span className="feature-icon">✅</span>
-              <span>ISO Certified Quality</span>
-            </div>
-            <div className="feature-item">
               <span className="feature-icon">🌱</span>
               <span>100% Natural Products</span>
             </div>

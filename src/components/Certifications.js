@@ -77,47 +77,6 @@ const Certifications = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="quality-process">
-                <h4>Quality Assurance Process</h4>
-                <div className="process-steps">
-                  <div className="process-step">
-                    <div className="step-number">1</div>
-                    <div className="step-content">
-                      <h5>Raw Material Selection</h5>
-                      <p>Carefully selected premium quality raw materials from trusted suppliers</p>
-                    </div>
-                  </div>
-                  <div className="process-step">
-                    <div className="step-number">2</div>
-                    <div className="step-content">
-                      <h5>Processing & Manufacturing</h5>
-                      <p>State-of-the-art processing facilities with strict quality controls</p>
-                    </div>
-                  </div>
-                  <div className="process-step">
-                    <div className="step-number">3</div>
-                    <div className="step-content">
-                      <h5>Laboratory Testing</h5>
-                      <p>Comprehensive testing for quality, purity, and safety standards</p>
-                    </div>
-                  </div>
-                  <div className="process-step">
-                    <div className="step-number">4</div>
-                    <div className="step-content">
-                      <h5>Packaging & Storage</h5>
-                      <p>Proper packaging and storage to maintain product quality</p>
-                    </div>
-                  </div>
-                  <div className="process-step">
-                    <div className="step-number">5</div>
-                    <div className="step-content">
-                      <h5>Final Inspection</h5>
-                      <p>Final quality inspection before dispatch to ensure excellence</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </ScrollAnimation>
         </div>

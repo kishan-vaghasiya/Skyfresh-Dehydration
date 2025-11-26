@@ -64,7 +64,7 @@ const About = () => {
         <ScrollAnimation animation="fade-in-up" delay={0.3}>
           <div className="about-stats">
             <div className="stat-card">
-              <div className="stat-number">15+</div>
+              <div className="stat-number">5+</div>
               <div className="stat-label">Years Experience</div>
             </div>
             <div className="stat-card">
