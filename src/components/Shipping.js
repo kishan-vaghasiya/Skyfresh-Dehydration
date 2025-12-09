@@ -65,7 +65,7 @@ const Shipping = () => {
                   <div className="ship-containers">
                     <div className="container-box container-1">
                       <div className="container-door"></div>
-                      <div className="container-label">SKYTECH</div>
+                      <div className="container-label">SkyFresh</div>
                     </div>
                     <div className="container-box container-2">
                       <div className="container-door"></div>

@@ -13,7 +13,7 @@ const About = () => {
     <section id="about" className="about-section">
       <div className="container">
         <div className={`section-header ${isLoaded ? 'fade-in-up' : ''}`}>
-          <h2 className="section-title">About Skytech International</h2>
+          <h2 className="section-title">About SkyfreshDehydration</h2>
           <p className="section-subtitle">Your trusted partner in premium food exports</p>
         </div>
 
@@ -60,27 +60,6 @@ const About = () => {
 
          
         </div>
-
-        <ScrollAnimation animation="fade-in-up" delay={0.3}>
-          <div className="about-stats">
-            <div className="stat-card">
-              <div className="stat-number">5+</div>
-              <div className="stat-label">Years Experience</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">50+</div>
-              <div className="stat-label">Countries</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">1000+</div>
-              <div className="stat-label">Happy Clients</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">99%</div>
-              <div className="stat-label">Quality Rating</div>
-            </div>
-          </div>
-        </ScrollAnimation>
       </div>
     </section>
   );

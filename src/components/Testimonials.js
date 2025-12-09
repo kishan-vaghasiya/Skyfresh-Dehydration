@@ -18,7 +18,7 @@ const Testimonials = () => {
       country: "🇺🇸 United States",
       product: "Onion Powder",
       rating: 5,
-      text: "Skytech International has been our trusted partner for over 5 years. Their onion powder quality is consistently excellent, and their delivery is always on time. Highly recommended!",
+      text: "SkyFresh Dehydration has been our trusted partner for over 5 years. Their onion powder quality is consistently excellent, and their delivery is always on time. Highly recommended!",
       image: "👩‍💼"
     },
     {
@@ -28,7 +28,7 @@ const Testimonials = () => {
       country: "🇸🇬 Singapore",
       product: "Garlic Powder",
       rating: 5,
-      text: "The garlic powder from Skytech is of premium quality. We've been importing from them for 3 years and never had any quality issues. Great customer service too!",
+      text: "The garlic powder from SkyFresh is of premium quality. We've been importing from them for 3 years and never had any quality issues. Great customer service too!",
       image: "👨‍💼"
     },
     {
@@ -48,7 +48,7 @@ const Testimonials = () => {
       country: "🇦🇪 UAE",
       product: "All Products",
       rating: 5,
-      text: "Skytech International is our go-to supplier for all food products. Their quality standards are unmatched, and they understand the Middle Eastern market requirements perfectly.",
+      text: "SkyFresh Dehydration is our go-to supplier for all food products. Their quality standards are unmatched, and they understand the Middle Eastern market requirements perfectly.",
       image: "👨‍💼"
     },
     {
@@ -68,7 +68,7 @@ const Testimonials = () => {
       country: "🇦🇺 Australia",
       product: "Premium Chips",
       rating: 5,
-      text: "We've been working with Skytech for 4 years now. Their premium chips are popular in the Australian market. Great quality, competitive pricing, and reliable delivery.",
+      text: "We've been working with SkyFresh for 4 years now. Their premium chips are popular in the Australian market. Great quality, competitive pricing, and reliable delivery.",
       image: "👨‍💼"
     }
   ];

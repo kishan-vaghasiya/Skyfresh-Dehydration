@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Products.css';
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import './ProductDetails.css';
 
 const myProducts = [
-  { id: 'onion-powder', name: 'Onion Powder', images: ['https://m.media-amazon.com/images/I/61aFPnRZOtL._SL1024_.jpg', 'https://example.com/onion1.jpg', 'https://example.com/onion2.jpg'], category: 'Dehydrated Powders', badge: 'Best Seller', description: 'High-quality dehydrated onion powder perfect for cooking.' },
+  { id: 'onion-powder', name: 'Onion Powder', images: ['https://m.media-amazon.com/images/I/61aFPnRZOtL._SL1024_.jpg', 'https://images.jdmagicbox.com/quickquotes/images_main/mtc0ntkyodyzmq-1745928631-6843c713.png', 'https://eximtunnel.com/wp-content/uploads/2024/02/dehydrated-red-onion-powder.jpg'], category: 'Dehydrated Powders', badge: 'Best Seller', description: 'High-quality dehydrated onion powder perfect for cooking.' },
   { id: 'garlic-powder', name: 'Garlic Powder', images: ['https://5.imimg.com/data5/SELLER/Default/2024/12/476403454/QI/DB/JZ/45577315/dehydrated-garlic-powder-export-quality-500x500.png', 'https://example.com/garlic1.jpg', 'https://example.com/garlic2.jpg'], category: 'Dehydrated Powders', badge: 'Premium', description: 'Premium dehydrated garlic powder for authentic flavor.' },
   { id: 'turmeric-powder', name: 'Turmeric Powder', images: ['https://thumbs.dreamstime.com/b/hands-sprinkle-golden-powder-over-dark-bowl-yellow-falls-down-abstract-photo-displays-culinary-food-spice-dust-gold-celebration-407685058.jpg', 'https://example.com/turmeric1.jpg', 'https://example.com/turmeric2.jpg'], category: 'Spices & Masala', badge: 'Golden Haldi', description: 'Pure turmeric powder with natural curcumin.' },
   { id: 'cumin-powder', name: 'Cumin Powder', images: ['https://t3.ftcdn.net/jpg/17/39/85/48/360_F_1739854856_TjVGEkMghChYVLIWFMJZStZP8YH1Cp9E.jpg', 'https://example.com/cumin1.jpg', 'https://example.com/cumin2.jpg'], category: 'Spices & Masala', badge: 'Popular', description: 'Aromatic cumin powder for Indian cuisine.' },
@@ -13,54 +15,45 @@ const myProducts = [
   { id: 'chana-dal', name: 'Chana Dal', images: ['https://thumbs.dreamstime.com/b/split-chickpea-also-know-as-chana-dal-dried-lentils-toor-heap-yellow-chickpeas-raw-lentil-indian-beans-isolated-black-248965448.jpg', 'https://example.com/chana1.jpg', 'https://example.com/chana2.jpg'], category: 'Kathol & Pulses', badge: 'Daily Staple', description: 'Essential chana dal for daily meals.' },
   { id: 'soya-paneer', name: "Soya paneer", images: ["https://www.ffce.in/wp-content/uploads/2025/01/Soya-Paneer.jpg", "https://example.com/soya1.jpg", "https://example.com/soya2.jpg"], category: "Kathol & Pulses", badge: "Healthy", description: "Healthy soya paneer alternative." },
   { id: 'peanut', name: "Peanut", images: ["https://png.pngtree.com/thumb_back/fh260/background/20250429/pngtree-peanut-butter-and-peanut-pellets-image_17229219.jpg", "https://example.com/peanut1.jpg", "https://example.com/peanut2.jpg"], category: "Kathol & Pulses", badge: "Healthy", description: "Crunchy peanuts for snacking." },
-
 ];
 
-const Products = () => {
-  const navigate = useNavigate();
-  const [currentIndex, setCurrentIndex] = useState(0);
+const ProductDetails = () => {
+  const { id } = useParams();
+  const product = myProducts.find(p => p.id === id);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % (myProducts.length * 2));
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, []);
+  if (!product) {
+    return <div>Product not found</div>;
+  }
 
   return (
-    <section id="products" className="products-section">
-      <div className="container">
-        <div className="section-header fade-in-up">
-          <h2 className="section-title">Our Premium Products</h2>
-          <p className="section-subtitle">Exported to 50+ countries worldwide</p>
-        </div>
-
-        <div className="product-carousel-section">
-          <div className="carousel-container">
-            <div
-              className="product-carousel"
-              style={{
-                transform: `translateX(calc(-${currentIndex} * ((100% - 3rem) / 3 + 1.5rem)))`
-              }}
-            >
-              {[...myProducts, ...myProducts].map((product, idx) => (
-                <div key={`${product.id}-${idx}`} className="carousel-card" onClick={() => navigate(`/product/${product.id}`)}>
-                  <div className="product-card-image-container">
-                    <img src={product.images[0]} alt={product.name} className="product-card-image" />
-                   </div>
-                  <div className="product-card-content">
-                    <h3 className="product-card-title">{product.name}</h3>
-                  </div>
-                </div>
-              ))}
-            </div>
+    <div>
+      <Navbar />
+      <div className="product-details-container">
+        <div className="product-images">
+          <img src={product.images[selectedImageIndex]} alt={product.name} className="main-image" />
+          <div className="thumbnails">
+            {product.images.map((img, idx) => (
+              <img
+                key={idx}
+                src={img}
+                alt={`${product.name} ${idx + 1}`}
+                className={`thumbnail ${selectedImageIndex === idx ? 'active' : ''}`}
+                onClick={() => setSelectedImageIndex(idx)}
+              />
+            ))}
           </div>
         </div>
-
+        <div className="product-info">
+          <h1>{product.name}</h1>
+          <p className="category">{product.category}</p>
+          <span className="badge">{product.badge}</span>
+          <p className="description">{product.description}</p>
+        </div>
       </div>
-    </section>
+      <Footer />
+    </div>
   );
 };
 
-export default Products;
+export default ProductDetails;

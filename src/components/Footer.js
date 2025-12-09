@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <img src={imgPath.logo1} alt="SkyTech Food Export" className="footer-logo-img" />
-              <span>SkyFresh Dehydration</span>
+              <img src={imgPath.logo1} alt="SkyfreshDehydration" className="footer-logo-img" />
+              <span>SkyfreshDehydration</span>
             </div>
             <p className="footer-description">
               Leading exporter of premium food products to 50+ countries worldwide. 
@@ -63,7 +63,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2024 SkyTech Food Export. All rights reserved.</p>
+          <p>&copy; 2024 SkyfreshDehydration. All rights reserved.</p>
           <p>Made with ❤️ for global food excellence</p>
         </div>
       </div>
