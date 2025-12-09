@@ -4,7 +4,7 @@ import './Products.css';
 
 const myProducts = [
   { id: 'onion-powder', name: 'Onion Powder', images: ['https://m.media-amazon.com/images/I/61aFPnRZOtL._SL1024_.jpg', 'https://example.com/onion1.jpg', 'https://example.com/onion2.jpg'], category: 'Dehydrated Powders', badge: 'Best Seller', description: 'High-quality dehydrated onion powder perfect for cooking.' },
-  { id: 'garlic-powder', name: 'Garlic Powder', images: ['https://5.imimg.com/data5/SELLER/Default/2024/12/476403454/QI/DB/JZ/45577315/dehydrated-garlic-powder-export-quality-500x500.png', 'https://example.com/garlic1.jpg', 'https://example.com/garlic2.jpg'], category: 'Dehydrated Powders', badge: 'Premium', description: 'Premium dehydrated garlic powder for authentic flavor.' },
+  { id: 'garlic-powder', name: 'Garlic Powder', images: ['https://5.imimg.com/data5/SELLER/Default/2024/12/476403454/QI/DB/JZ/45577315/dehydrated-garlic-powder-export-quality-500x500.png', 'https://mstayna.in/wp-content/uploads/2024/06/bowl-dry-garlic-powder-rosemary-white-background_781325-19494.jpg', 'https://dailyfarmer.in/cdn/shop/articles/SEOon_garlic-powder-cloves-feature_25ab90b2-f5c4-4346-b10c-26af5ef5d51f.jpg?v=1744262375'], category: 'Dehydrated Powders', badge: 'Premium', description: 'Premium dehydrated garlic powder for authentic flavor.' },
   { id: 'turmeric-powder', name: 'Turmeric Powder', images: ['https://thumbs.dreamstime.com/b/hands-sprinkle-golden-powder-over-dark-bowl-yellow-falls-down-abstract-photo-displays-culinary-food-spice-dust-gold-celebration-407685058.jpg', 'https://example.com/turmeric1.jpg', 'https://example.com/turmeric2.jpg'], category: 'Spices & Masala', badge: 'Golden Haldi', description: 'Pure turmeric powder with natural curcumin.' },
   { id: 'cumin-powder', name: 'Cumin Powder', images: ['https://t3.ftcdn.net/jpg/17/39/85/48/360_F_1739854856_TjVGEkMghChYVLIWFMJZStZP8YH1Cp9E.jpg', 'https://example.com/cumin1.jpg', 'https://example.com/cumin2.jpg'], category: 'Spices & Masala', badge: 'Popular', description: 'Aromatic cumin powder for Indian cuisine.' },
   { id: 'coriander-powder', name: 'Coriander Powder', images: ['https://png.pngtree.com/thumb_back/fh260/background/20240613/pngtree-coriander-powder-in-wooden-bowl-with-seeds-on-black-background-image_15749568.jpg', 'https://example.com/coriander1.jpg', 'https://example.com/coriander2.jpg'], category: 'Spices & Masala', badge: 'Fresh', description: 'Fresh coriander powder for enhanced taste.' },
@@ -19,6 +19,33 @@ const myProducts = [
 const Products = () => {
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(3);
+
+  const getVisibleCards = () => {
+    if (window.innerWidth <= 480) return 1;
+    if (window.innerWidth <= 768) return 2;
+    return 3;
+  };
+
+  const getMoveDistance = () => {
+    const gap = window.innerWidth <= 480 ? '1rem' : '1.5rem';
+    return `calc((100% + ${gap}) / ${visibleCards})`;
+  };
+
+  useEffect(() => {
+    const updateVisibleCards = () => {
+      setVisibleCards(getVisibleCards());
+    };
+
+    updateVisibleCards();
+    window.addEventListener('resize', updateVisibleCards);
+
+    return () => window.removeEventListener('resize', updateVisibleCards);
+  }, []);
+
+  useEffect(() => {
+    setCurrentIndex(0); // Reset to start when visible cards change
+  }, [visibleCards]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,7 +68,7 @@ const Products = () => {
             <div
               className="product-carousel"
               style={{
-                transform: `translateX(calc(-${currentIndex} * ((100% - 3rem) / 3 + 1.5rem)))`
+                transform: `translateX(calc(-${currentIndex} * ${getMoveDistance()}))`
               }}
             >
               {[...myProducts, ...myProducts].map((product, idx) => (
