@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Products.css';
 
@@ -44,7 +44,7 @@ const Products = () => {
   }, []);
 
   useEffect(() => {
-    setCurrentIndex(0); // Reset to start when visible cards change
+    setCurrentIndex(0); 
   }, [visibleCards]);
 
   useEffect(() => {

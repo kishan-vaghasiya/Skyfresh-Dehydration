@@ -17,18 +17,18 @@ const Footer = () => {
               Quality, reliability, and excellence in every shipment.
             </p>
             <div className="social-links">
-              <a href="#" className="social-link" aria-label="Facebook">
+              <button className="social-link" aria-label="Facebook">
                 <span className="social-icon">📘</span>
-              </a>
-              <a href="#" className="social-link" aria-label="LinkedIn">
+              </button>
+              <button className="social-link" aria-label="LinkedIn">
                 <span className="social-icon">💼</span>
-              </a>
-              <a href="#" className="social-link" aria-label="Instagram">
+              </button>
+              <button className="social-link" aria-label="Instagram">
                 <span className="social-icon">📷</span>
-              </a>
-              <a href="#" className="social-link" aria-label="Twitter">
+              </button>
+              <button className="social-link" aria-label="Twitter">
                 <span className="social-icon">🐦</span>
-              </a>
+              </button>
             </div>
           </div>
 
@@ -52,14 +52,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="footer-section">
-            <h3>Contact Info</h3>
-            <div className="contact-info">
-              <p>📧 skyfresh@gmail.com</p>
-              <p>📍 Ahemdabad,Gujarat</p>
-              <p>🌍 Exporting to 50+ countries</p>
-            </div>
-          </div>
+         
         </div>
         
         <div className="footer-bottom">
