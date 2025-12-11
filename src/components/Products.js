@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Products.css';
 
@@ -20,6 +20,7 @@ const Products = () => {
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(3);
+  const carouselRef = useRef();
 
   const getVisibleCards = () => {
     if (window.innerWidth <= 480) return 1;
@@ -47,13 +48,41 @@ const Products = () => {
     setCurrentIndex(0); 
   }, [visibleCards]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % (myProducts.length * 2));
-    }, 2000);
+ useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentIndex((prev) => {
+      const totalSlides = myProducts.length;
 
-    return () => clearInterval(interval);
-  }, []);
+      // Continuous infinite scroll (NO JUMP)
+      if (prev >= totalSlides) {
+        if (carouselRef.current) {
+          // remove animation before reset
+          carouselRef.current.style.transition = "none";
+        }
+
+        const resetTo = prev - totalSlides; // reset index
+
+        requestAnimationFrame(() => {
+          setCurrentIndex(resetTo);
+
+          requestAnimationFrame(() => {
+            if (carouselRef.current) {
+              // re-enable transition
+              carouselRef.current.style.transition = "transform 0.5s ease";
+            }
+          });
+        });
+
+        return prev + 1;
+      }
+
+      return prev + 1;
+    });
+  }, 2000);
+
+  return () => clearInterval(interval);
+}, []);
+
 
   return (
     <section id="products" className="products-section">
@@ -67,6 +96,7 @@ const Products = () => {
           <div className="carousel-container">
             <div
               className="product-carousel"
+              ref={carouselRef}
               style={{
                 transform: `translateX(calc(-${currentIndex} * ${getMoveDistance()}))`
               }}

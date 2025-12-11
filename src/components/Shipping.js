@@ -24,15 +24,6 @@ const Shipping = () => {
               <p>We use modern sea containers to ensure your products reach their destination safely and efficiently.</p>
               
               <div className="shipping-features">
-                <ScrollAnimation animation="fade-in-up" delay={0.2}>
-                  <div className="feature-item">
-                    <div className="feature-icon">🚢</div>
-                    <div className="feature-text">
-                      <h4>Sea Freight</h4>
-                      <p>Cost-effective shipping via sea containers</p>
-                    </div>
-                  </div>
-                </ScrollAnimation>
                 
                 <ScrollAnimation animation="fade-in-up" delay={0.3}>
                   <div className="feature-item">

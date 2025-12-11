@@ -21,6 +21,10 @@ const ProductDetails = () => {
   const product = myProducts.find(p => p.id === id);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
+  const handleQuoteClick = () => {
+    window.location.href = 'mailto:skyfreshdehydration@gmail.com';
+  };
+
   if (!product) {
     return <div>Product not found</div>;
   }
@@ -51,7 +55,7 @@ const ProductDetails = () => {
           <p className="benefits"><strong>Benefits:</strong> {product.benefits}</p>
           <p className="usage"><strong>Usage:</strong> {product.usage}</p>
           <p className="storage"><strong>Storage:</strong> {product.storage}</p>
-          <button className="contact-btn">Contact for Quote</button>
+          <button className="contact-btn" onClick={handleQuoteClick}>Contact for Quote</button>
         </div>
       </div>
     </div>

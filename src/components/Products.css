@@ -19,6 +19,9 @@
   margin-bottom: 3rem;
   animation: fadeInUp 1s ease-out;
 }
+.product-carousel {
+  transition: transform 0.5s linear;
+}
 
 .section-title {
   font-size: 2.5rem;
