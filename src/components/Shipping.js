@@ -121,6 +121,26 @@ const Shipping = () => {
               <div className="flag flag-south-korea">🇰🇷</div>
               <span>South Korea</span>
             </div>
+            <div className="flag-item">
+              <div className="flag flag-russia">🇷🇺</div>
+              <span>Russia</span>
+            </div>
+            <div className="flag-item">
+              <div className="flag flag-indonesia">🇮🇩</div>
+              <span>Indonesia</span>
+            </div>
+            <div className="flag-item">
+              <div className="flag flag-mexico">🇲🇽</div>
+              <span>Mexico</span>
+            </div>
+            <div className="flag-item">
+              <div className="flag flag-brazil">🇧🇷</div>
+              <span>Brazil</span>
+            </div>
+            <div className="flag-item">
+              <div className="flag flag-malaysia">🇲🇾</div>
+              <span>Malaysia</span>
+            </div>
           </div>
         </div>
       </div>
