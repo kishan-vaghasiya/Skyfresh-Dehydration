@@ -10,7 +10,6 @@ const Footer = () => {
           <div className="footer-section">
             <div className="footer-logo">
               <img src={imgPath.logo1} alt="SkyfreshDehydration" className="footer-logo-img" />
-              <span>SkyfreshDehydration</span>
             </div>
             <p className="footer-description">
               Leading exporter of premium food products to 50+ countries worldwide. 

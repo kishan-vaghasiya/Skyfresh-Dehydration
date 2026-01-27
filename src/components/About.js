@@ -12,14 +12,12 @@ const About = () => {
   return (
     <section id="about" className="about-section">
       <div className="container">
-        <div className={`section-header ${isLoaded ? 'fade-in-up' : ''}`}>
+        <div className={`section-header ${ isLoaded ? 'fade-in-up' : ''}`}>
           <h2 className="section-title">About Skyfresh Dehydration</h2>
           <p className="section-subtitle">Your trusted partner in premium food exports</p>
         </div>
-
        <div className="about-content">
   
-  {/* LEFT SIDE — TEXT */}
   <ScrollAnimation animation="fade-in-left" delay={0.1}>
     <div className="about-left">
       <h3>5+ Years of Excellence in Food Export</h3>
@@ -32,7 +30,6 @@ const About = () => {
     </div>
   </ScrollAnimation>
 
-  {/* RIGHT SIDE — CORE VALUES */}
   <ScrollAnimation animation="fade-in-right" delay={0.2}>
     <div className="about-right">
       <div className="about-values">
@@ -66,11 +63,9 @@ const About = () => {
       </div>
     </div>
   </ScrollAnimation>
-
 </div>
-
-      </div>
-    </section>
+</div>
+</section>
   );
 };
 

@@ -11,17 +11,18 @@ const Hero = () => {
   return (
     <section id="home" className="hero">
       <div className="hero-content">
-        <div className={`hero-text ${isLoaded ? 'fade-in-up' : ''}`}>
-          
+        <div className={`hero-t¯ext ${isLoaded ? 'fade-in-up' : ''}`}>
+
           <h1 className="hero-title">
             Premium Food Exports
             <span className="highlight"> Worldwide</span>
           </h1>
           <p className="hero-subtitle">
-            Leading exporter of high-quality onion powder, garlic powder, and premium food chips to 50+ countries. 
-            <strong> 5+ years of excellence</strong> in food export industry.
+            Trusted global trader and exporter of premium onion powder, garlic powder, and food chips, serving 50+ countries worldwide.
+            <strong> 5+ years of excellence</strong> in food trading & export.
           </p>
-          
+
+
           <div className="hero-buttons">
             <a href="#products" className="btn-primary">Explore Products</a>
             <a href="#contact" className="btn-secondary">Get Quote</a>
@@ -40,9 +41,9 @@ const Hero = () => {
               <div className="continent continent-6"></div>
             </div>
           </div>
-        </div> 
-        
-        
+        </div>
+
+
         <div className="floating-particles">
           <div className="particle particle-1"></div>
           <div className="particle particle-2"></div>
@@ -53,7 +54,7 @@ const Hero = () => {
           <div className="particle particle-7"></div>
           <div className="particle particle-8"></div>
         </div>
-        
+
         {/* Connection Lines */}
         <div className="connection-lines">
           <div className="line line-1"></div>
@@ -61,14 +62,14 @@ const Hero = () => {
           <div className="line line-3"></div>
           <div className="line line-4"></div>
         </div>
-        
+
         {/* Floating Shapes */}
         <div className="floating-shapes">
           <div className="shape shape-1"></div>
           <div className="shape shape-2"></div>
           <div className="shape shape-3"></div>
         </div>
-        
+
         {/* Sea Container Elements */}
         <div className="floating-containers">
           <div className="mini-container container-1">
@@ -81,7 +82,7 @@ const Hero = () => {
             <div className="container-icon">🌊</div>
           </div>
         </div>
-        
+
         {/* Country Flags */}
         <div className="floating-flags">
           <div className="mini-flag flag-1">🇺🇸</div>

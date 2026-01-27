@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import Certifications from '../components/Certifications';
 import Products from '../components/Products';
+import Gallery from '../components/Gallery';
 import Shipping from '../components/Shipping';
 import Stats from '../components/Stats';
 import Contact from '../components/Contact';

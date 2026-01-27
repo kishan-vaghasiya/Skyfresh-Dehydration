@@ -35,9 +35,10 @@ const Navbar = () => {
             <a href="#about" className="nav-link" onClick={closeMobileMenu}>About</a>
             <a href="#certifications" className="nav-link" onClick={closeMobileMenu}>Quality</a>
             <a href="#products" className="nav-link" onClick={closeMobileMenu}>Products</a>
-            <a href="#testimonials" className="nav-link" onClick={closeMobileMenu}>Reviews</a>
+            <a href="#testimonials" className="nav-link" onClick={closeMobileMenu}>Gallery</a>
             <a href="#shipping" className="nav-link" onClick={closeMobileMenu}>Shipping</a>
             <a href="#contact" className="nav-link" onClick={closeMobileMenu}>Contact</a>
+            {/* <a href="/brochure.pdf" download className="nav-link" onClick={closeMobileMenu}>Download Brochure</a> */}
           </div>
           <div 
             className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`}
@@ -54,9 +55,10 @@ const Navbar = () => {
         <a href="#about" className="nav-link" onClick={closeMobileMenu}>About</a>
         <a href="#certifications" className="nav-link" onClick={closeMobileMenu}>Quality</a>
         <a href="#products" className="nav-link" onClick={closeMobileMenu}>Products</a>
-        <a href="#testimonials" className="nav-link" onClick={closeMobileMenu}>Reviews</a>
+        <a href="#testimonials" className="nav-link" onClick={closeMobileMenu}>Gallery</a>
         <a href="#shipping" className="nav-link" onClick={closeMobileMenu}>Shipping</a>
         <a href="#contact" className="nav-link" onClick={closeMobileMenu}>Contact</a>
+        {/* <a href="/brochure.pdf" download className="nav-link" onClick={closeMobileMenu}>Download Brochure</a> */}
       </div>
     </>
   );
