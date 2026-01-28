@@ -38,7 +38,7 @@ const Contact = () => {
             <div className="contact-card-premium">
               <div className="card-icon-badge">🌍</div>
               <h3>Global Reach</h3>
-              <p>50+ Countries</p>
+              <p>12+ Countries</p>
               <p>Worldwide Shipping</p>
             </div>
 

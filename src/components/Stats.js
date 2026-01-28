@@ -40,7 +40,7 @@ const Stats = () => {
   }, []);
 
   const animateCounters = () => {
-    const targets = { countries: 50, clients: 1000, years: 15, quality: 99 };
+    const targets = { countries: 12, clients: 5, years: 2, quality: 99 };
     const duration = 2000;
     const steps = 60;
     const stepDuration = duration / steps;

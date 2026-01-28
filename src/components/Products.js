@@ -30,7 +30,7 @@ const Products = () => {
       <div className="container">
         <div className="section-header fade-in-up">
           <h2 className="section-title">Our Premium Products</h2>
-          <p className="section-subtitle">Exported to 50+ countries worldwide</p>
+          <p className="section-subtitle">Exported to 5+ countries worldwide</p>
         </div>
 
         <div className="products-grid">

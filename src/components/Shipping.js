@@ -82,64 +82,52 @@ const Shipping = () => {
           <h3>We Export To</h3>
           <div className="flags-grid">
             <div className="flag-item">
-              <div className="flag flag-usa">🇺🇸</div>
-              <span>United States</span>
+              <div className="flag flag-indonesia">🇮🇩</div>
+              <span>Indonesia</span>
             </div>
             <div className="flag-item">
-              <div className="flag flag-uk">🇬🇧</div>
-              <span>United Kingdom</span>
+              <div className="flag flag-malaysia">🇲🇾</div>
+              <span>Malaysia</span>
             </div>
             <div className="flag-item">
-              <div className="flag flag-germany">🇩🇪</div>
-              <span>Germany</span>
+              <div className="flag flag-philippines">🇵🇭</div>
+              <span>Philippines</span>
             </div>
             <div className="flag-item">
-              <div className="flag flag-france">🇫🇷</div>
-              <span>France</span>
-            </div>
-            <div className="flag-item">
-              <div className="flag flag-canada">🇨🇦</div>
-              <span>Canada</span>
-            </div>
-            <div className="flag-item">
-              <div className="flag flag-australia">🇦🇺</div>
-              <span>Australia</span>
-            </div>
-            <div className="flag-item">
-              <div className="flag flag-japan">🇯🇵</div>
-              <span>Japan</span>
-            </div>
-            <div className="flag-item">
-              <div className="flag flag-singapore">🇸🇬</div>
-              <span>Singapore</span>
-            </div>
-            <div className="flag-item">
-              <div className="flag flag-uae">🇦🇪</div>
-              <span>UAE</span>
-            </div>
-            <div className="flag-item">
-              <div className="flag flag-south-korea">🇰🇷</div>
-              <span>South Korea</span>
+              <div className="flag flag-qatar">🇶🇦</div>
+              <span>Qatar</span>
             </div>
             <div className="flag-item">
               <div className="flag flag-russia">🇷🇺</div>
               <span>Russia</span>
             </div>
             <div className="flag-item">
-              <div className="flag flag-indonesia">🇮🇩</div>
-              <span>Indonesia</span>
+              <div className="flag flag-uae">🇦🇪</div>
+              <span>Dubai</span>
             </div>
             <div className="flag-item">
-              <div className="flag flag-mexico">🇲🇽</div>
-              <span>Mexico</span>
+              <div className="flag flag-singapore">🇸🇬</div>
+              <span>Singapore</span>
             </div>
             <div className="flag-item">
-              <div className="flag flag-brazil">🇧🇷</div>
-              <span>Brazil</span>
+              <div className="flag flag-sri-lanka">🇱🇰</div>
+              <span>Sri Lanka</span>
             </div>
             <div className="flag-item">
-              <div className="flag flag-malaysia">🇲🇾</div>
-              <span>Malaysia</span>
+              <div className="flag flag-japan">🇯🇵</div>
+              <span>Tokyo</span>
+            </div>
+            <div className="flag-item">
+              <div className="flag flag-vietnam">🇻🇳</div>
+              <span>Vietnam</span>
+            </div>
+            <div className="flag-item">
+              <div className="flag flag-thailand">🇹🇭</div>
+              <span>Thailand</span>
+            </div>
+            <div className="flag-item">
+              <div className="flag flag-switzerland">🇨🇭</div>
+              <span>Switzerland</span>
             </div>
           </div>
         </div>

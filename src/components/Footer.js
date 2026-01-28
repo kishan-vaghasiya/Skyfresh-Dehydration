@@ -46,8 +46,13 @@ const Footer = () => {
             <ul className="footer-links">
               <li><a href="#products">Onion Powder</a></li>
               <li><a href="#products">Garlic Powder</a></li>
-              <li><a href="#products">Premium Chips</a></li>
-              <li><a href="#contact">Custom Orders</a></li>
+              <li><a href="#products">Potato Powder</a></li>
+              <li><a href="#products">Mint Powder</a></li>
+              <li><a href="#products">Turmeric Powder</a></li>
+               <li><a href="#products">Cumin Powder</a></li>
+              <li><a href="#products">Coriander Powder</a></li>
+             <li><a href="#products">Red Chili Powder</a></li>
+
             </ul>
           </div>
 

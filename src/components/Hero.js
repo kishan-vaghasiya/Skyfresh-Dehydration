@@ -14,12 +14,12 @@ const Hero = () => {
         <div className={`hero-t¯ext ${isLoaded ? 'fade-in-up' : ''}`}>
 
           <h1 className="hero-title">
-            Premium Food Exports
+            Premium Food Products Exports
             <span className="highlight"> Worldwide</span>
           </h1>
           <p className="hero-subtitle">
             Trusted global trader and exporter of premium onion powder, garlic powder, and food chips, serving 50+ countries worldwide.
-            <strong> 5+ years of excellence</strong> in food trading & export.
+            <strong> 2+ years of excellence</strong> in food trading & export.
           </p>
 
 
