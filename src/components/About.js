@@ -23,7 +23,7 @@ const About = () => {
       <h3>2+ Years of Excellence in Food Export</h3>
       <p>
         Based in Ahemdabad, Gujarat, we specialize in exporting premium quality onion powder, 
-        garlic powder, and food chips to over 50 countries worldwide. Our commitment to 
+        garlic powder, and food chips to over 12 countries worldwide. Our commitment to 
         quality, reliability, and customer satisfaction has made us a trusted partner 
         for 1000+ clients globally.
       </p>

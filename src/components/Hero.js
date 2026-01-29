@@ -18,7 +18,7 @@ const Hero = () => {
             <span className="highlight"> Worldwide</span>
           </h1>
           <p className="hero-subtitle">
-            Trusted global trader and exporter of premium onion powder, garlic powder, and food chips, serving 50+ countries worldwide.
+            Trusted global trader and exporter of premium onion powder, garlic powder, and food chips, serving 12+ countries worldwide.
             <strong> 2+ years of excellence</strong> in food trading & export.
           </p>
 

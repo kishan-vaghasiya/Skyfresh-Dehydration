@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import './Products.css';
 
 const myProducts = [
-  { id: 'onion-powder', name: 'DEHYDRATED ONION POWDER', images: ['https://img.sanishtech.com/u/228d921ef2f5a7c0c27115077ef7812e.png',],  },
+  { id: 'red-onion-powder', name: 'DEHYDRATED RED ONION POWDER', images: ['https://img.sanishtech.com/u/228d921ef2f5a7c0c27115077ef7812e.png',],  },
+   { id: 'pink-onion-powder', name: 'DEHYDRATED PINK ONION POWDER', images: ['https://img.sanishtech.com/u/6d6e7d4ed97b45d86305ab82cca89feb.jpg',],  },
+     { id: 'white-onion-powder', name: 'DEHYDRATED WHITE ONION POWDER', images: ['https://img.sanishtech.com/u/8cba785b78eea5a4c92bedfc8180ca05.jpg',],  },
   { id: 'garlic-powder', name: 'DEHYDRATED GARLIC POWDER', images: ['https://img.sanishtech.com/u/2efd7c2730497c37e14e814a73ab7ac6.jpg',], },
   { id: 'Potato', name: "DEHYDRATED POTATO POWDER", images: ["https://img.sanishtech.com/u/d01f4a8b4ae5d55f36ce2fc0ca88e542.jpg", ], },
    { id: 'amchur-powder', name: 'NATURE AMCHUR POWDER', images: ['https://img.sanishtech.com/u/37edd058e2d5d77d23e48dd83029d5a7.jpg', ], },
@@ -35,7 +37,7 @@ const Products = () => {
       <div className="container">
         <div className="section-header fade-in-up">
           <h2 className="section-title">Our Premium Products</h2>
-          <p className="section-subtitle">Exported to 5+ countries worldwide</p>
+          <p className="section-subtitle">Exported to 12+ countries worldwide</p>
         </div>
 
         <div className="products-grid">
