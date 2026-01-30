@@ -12,7 +12,7 @@ const Footer = () => {
               <img src={imgPath.logo1} alt="SkyfreshDehydration" className="footer-logo-img" />
             </div>
             <p className="footer-description">
-              Leading exporter of premium food products to 50+ countries worldwide. 
+              Leading exporter of premium food products to 12+ countries worldwide. 
               Quality, reliability, and excellence in every shipment.
             </p>
             <div className="social-links">
@@ -43,17 +43,22 @@ const Footer = () => {
 
           <div className="footer-section">
             <h3>Products</h3>
-            <ul className="footer-links">
-              <li><a href="#products">Onion Powder</a></li>
-              <li><a href="#products">Garlic Powder</a></li>
-              <li><a href="#products">Potato Powder</a></li>
-              <li><a href="#products">Mint Powder</a></li>
-              <li><a href="#products">Turmeric Powder</a></li>
-               <li><a href="#products">Cumin Powder</a></li>
-              <li><a href="#products">Coriander Powder</a></li>
-             <li><a href="#products">Red Chili Powder</a></li>
-
-            </ul>
+            <div className="product-columns">
+              <ul className="footer-links">
+                <li><a href="#products">Onion Powder</a></li>
+                <li><a href="#products">Garlic Powder</a></li>
+                <li><a href="#products">Potato Powder</a></li>
+                <li><a href="#products">Mint Powder</a></li>
+                <li><a href="#products">Turmeric Powder</a></li>
+              </ul>
+              <ul className="footer-links">
+                <li><a href="#products">Cumin Powder</a></li>
+                <li><a href="#products">Coriander Powder</a></li>
+                <li><a href="#products">Red Chili Powder</a></li>
+                <li><a href="#products">AMCHUR POWDER</a></li>
+                <li><a href="#products">KESAR MANGO PULP</a></li>
+              </ul>
+            </div>
           </div>
 
          

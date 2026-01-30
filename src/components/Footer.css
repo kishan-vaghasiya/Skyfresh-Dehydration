@@ -119,6 +119,11 @@
   left: 0;
 }
 
+.product-columns {
+  display: flex;
+  gap: 2rem;
+}
+
 .social-links {
   display: flex;
   gap: 1rem;

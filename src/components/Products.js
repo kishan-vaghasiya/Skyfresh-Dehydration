@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { imgPath } from '../assets/index.js';
 import './Products.css';
 
 const myProducts = [
-  { id: 'red-onion-powder', name: 'DEHYDRATED RED ONION POWDER', images: ['https://img.sanishtech.com/u/228d921ef2f5a7c0c27115077ef7812e.png',],  },
-   { id: 'pink-onion-powder', name: 'DEHYDRATED PINK ONION POWDER', images: ['https://img.sanishtech.com/u/6d6e7d4ed97b45d86305ab82cca89feb.jpg',],  },
-     { id: 'white-onion-powder', name: 'DEHYDRATED WHITE ONION POWDER', images: ['https://img.sanishtech.com/u/8cba785b78eea5a4c92bedfc8180ca05.jpg',],  },
-  { id: 'garlic-powder', name: 'DEHYDRATED GARLIC POWDER', images: ['https://img.sanishtech.com/u/2efd7c2730497c37e14e814a73ab7ac6.jpg',], },
-  { id: 'Potato', name: "DEHYDRATED POTATO POWDER", images: ["https://img.sanishtech.com/u/d01f4a8b4ae5d55f36ce2fc0ca88e542.jpg", ], },
-   { id: 'amchur-powder', name: 'NATURE AMCHUR POWDER', images: ['https://img.sanishtech.com/u/37edd058e2d5d77d23e48dd83029d5a7.jpg', ], },
-  { id: 'Mint', name: "DEHYDRATED MINT POWDER", images: ["https://img.sanishtech.com/u/da057461302311368e78c570cfbb7d72.jpg", ],  },
-  { id: 'turmeric-powder', name: 'TURMERIC POWDER', images: ['https://img.sanishtech.com/u/ff6f114488624f769aac24358151e789.jpg', ],   },
-  { id: 'cumin-powder', name: 'CUMIN POWDER', images: ['https://img.sanishtech.com/u/2edda56ad83323aea2d52199243fbb91.jpg', ],  },
-  { id: 'coriander-powder', name: 'CORIANDER POWDER', images: ['https://img.sanishtech.com/u/39b3cfaeff523c9d538065391b6d5afa.jpg',], },
-  { id: 'red-chili-powder', name: 'RED CHILI POWDER', images: ['https://img.sanishtech.com/u/020ea795f61e7ff3b7c5bc39aa7df0e1.jpg', ], },
- { id: 'mango-pulp', name: 'KESAR MANGO PULP', images: ['https://img.sanishtech.com/u/8dfbcfbdfe92e17109fc67dcba1c8678.jpg', ], },
-
+  { id: 'red-onion-powder', name: 'DEHYDRATED RED ONION POWDER', imageKey: 'redonion' },
+  { id: 'pink-onion-powder', name: 'DEHYDRATED PINK ONION POWDER', imageKey: 'pinkonion' },
+  { id: 'white-onion-powder', name: 'DEHYDRATED WHITE ONION POWDER', imageKey: 'whiteonion' },
+  { id: 'garlic-powder', name: 'DEHYDRATED GARLIC POWDER', imageKey: 'garlic' },
+  { id: 'Potato', name: "DEHYDRATED POTATO POWDER", imageKey: 'potato' },
+  { id: 'amchur-powder', name: 'NATURE AMCHUR POWDER', imageKey: 'amchur' },
+  { id: 'Mint', name: "DEHYDRATED MINT POWDER", imageKey: 'mint' },
+  { id: 'turmeric-powder', name: 'TURMERIC POWDER', imageKey: 'turmeric' },
+  { id: 'cumin-powder', name: 'CUMIN POWDER', imageKey: 'cumin' },
+  { id: 'coriander-powder', name: 'CORIANDER POWDER', imageKey: 'coriander' },
+  { id: 'red-chili-powder', name: 'RED CHILI POWDER', imageKey: 'redchili' },
+  { id: 'mango-pulp', name: 'KESAR MANGO PULP', imageKey: 'mangopulp' },
 ];
 
 const Products = () => {
@@ -47,10 +47,10 @@ const Products = () => {
               className="product-card"
             >
               <div className="product-image-container">
-                <img 
-                  src={product.images[0]} 
-                  alt={product.name} 
-                  className="product-image" 
+                <img
+                  src={imgPath[product.imageKey]}
+                  alt={product.name}
+                  className="product-image"
                 />
               </div>
               <div className="product-info">
