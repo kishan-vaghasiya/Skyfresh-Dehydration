@@ -1,5 +1,4 @@
 export const imgPath = {
-
     logo:require('./Images/Logo2.png'),
     logo1:require('./Images/Logo2.png'),
     redonion:require('./Images/red_onion.png'),
@@ -14,5 +13,8 @@ export const imgPath = {
     coriander:require('./Images/coriander.png'),
     redchili:require('./Images/redchili.png'),
     mangopulp:require('./Images/mango_pulp.png'),
+}
 
+export const productImages = {
+   RedRedKibble: require('./Product/RedKibbled.png'),
 }

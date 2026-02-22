@@ -13,7 +13,11 @@ const ScrollAnimation = ({
   const animationStyle = {
     opacity: isVisible ? 1 : 0,
     transform: isVisible ? 'translateY(0)' : getInitialTransform(animation),
-    transition: `all ${duration}s cubic-bezier(0.4, 0, 0.2, 1) ${delay}s`,
+    transition: `opacity ${duration}s cubic-bezier(0.4, 0, 0.2, 1) ${delay}s, transform ${duration}s cubic-bezier(0.4, 0, 0.2, 1) ${delay}s`,
+    // GPU acceleration for smoother animations
+    willChange: 'opacity, transform',
+    backfaceVisibility: 'hidden',
+    perspective: '1000px',
   };
 
   return (

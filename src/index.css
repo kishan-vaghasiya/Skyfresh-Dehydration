@@ -22,9 +22,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: radial-gradient(circle at top, rgba(244, 196, 48, 0.2), transparent 50%),
-    linear-gradient(135deg, #fefefe 0%, #f7f9f2 100%);
-  background-attachment: fixed;
+  background: linear-gradient(135deg, #fefefe 0%, #f7f9f2 100%);
   min-height: 100vh;
   color: var(--color-text);
 }

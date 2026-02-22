@@ -8,6 +8,9 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  /* Improve scroll performance */
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 
 body {
@@ -18,6 +21,8 @@ body {
   background: var(--color-ivory);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Improve scroll performance */
+  -webkit-overflow-scrolling: touch;
 }
 
 .App {
@@ -250,9 +255,16 @@ body {
   animation: glow 2s ease-in-out infinite;
 }
 
-/* Smooth Transitions */
-* {
+/* Smooth Transitions - Only for specific elements, not global */
+.smooth-transition {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* GPU Acceleration for smoother scrolling */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 /* Custom Scrollbar */
@@ -271,6 +283,33 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, var(--color-green-dark), var(--color-yellow-dark));
+}
+
+/* Image Performance Optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* GPU acceleration for images */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Prevent layout shift during loading */
+img[src] {
+  content-visibility: auto;
+}
+
+/* Optimize animations for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in, .fade-in-up, .fade-in-down, .fade-in-left, .fade-in-right,
+  .scale-in, .slide-in-up, .animate-float, .animate-pulse, .animate-rotate,
+  .animate-bounce, .animate-shake, .animate-glow {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* Selection Color */

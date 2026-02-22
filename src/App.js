@@ -5,13 +5,17 @@ import ProductDetails from './pages/ProductDetails';
 import './App.css';
 
 function App() {
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product/:productId" element={<ProductDetails />} />
-      </Routes>
-    </Router>
+    <>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product/:productId" element={<ProductDetails />} />
+          </Routes>
+        </Router>
+      
+    </>
   );
 }
 

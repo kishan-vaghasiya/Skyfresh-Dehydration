@@ -12,8 +12,8 @@ const Footer = () => {
               <img src={imgPath.logo1} alt="SkyfreshDehydration" className="footer-logo-img" />
             </div>
             <p className="footer-description">
-              Leading exporter of premium food products to 12+ countries worldwide. 
-              Quality, reliability, and excellence in every shipment.
+              Leading exporter of premium food pr'oducts to 12+ countries worldwide. 
+              Quality, reliability, and excellence in every shipment. 
             </p>
             <div className="social-links">
               <button className="social-link" aria-label="Facebook">
@@ -60,12 +60,10 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-
-         
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2024 SkyfreshDehydration. All rights reserved.</p>
+          <p>&copy; 2024 SkyfreshDehydration. All rights reserved</p>
           <p>Made with ❤️ for global food excellence</p>
         </div>
       </div>

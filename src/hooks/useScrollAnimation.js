@@ -6,6 +6,10 @@ export const useScrollAnimation = (threshold = 0.1) => {
 
   useEffect(() => {
     const element = ref.current;
+    
+    // Skip if already visible or no element
+    if (isVisible || !element) return;
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -13,19 +17,19 @@ export const useScrollAnimation = (threshold = 0.1) => {
           observer.unobserve(entry.target);
         }
       },
-      { threshold }
+      { 
+        threshold,
+        // Improve performance by using rootMargin
+        rootMargin: '0px 0px -50px 0px'
+      }
     );
 
-    if (element) {
-      observer.observe(element);
-    }
+    observer.observe(element);
 
     return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
+      observer.disconnect();
     };
-  }, [threshold]);
+  }, [threshold, isVisible]);
 
   return [ref, isVisible];
 };
@@ -34,14 +38,26 @@ export const useScrollPosition = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
+    let ticking = false;
+    
     const updatePosition = () => {
       setScrollPosition(window.pageYOffset);
+      ticking = false;
     };
 
-    window.addEventListener('scroll', updatePosition);
-    updatePosition();
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updatePosition);
+        ticking = true;
+      }
+    };
 
-    return () => window.removeEventListener('scroll', updatePosition);
+    // Use passive listener for better scroll performance
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
   }, []);
 
   return scrollPosition;

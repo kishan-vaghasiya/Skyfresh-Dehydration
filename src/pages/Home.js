@@ -5,7 +5,7 @@ import About from '../components/About';
 import Certifications from '../components/Certifications';
 import Products from '../components/Products';
 import Shipping from '../components/Shipping';
-import Stats from '../components/Stats';
+import Stats from '../components/Stats';  
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
@@ -14,7 +14,7 @@ const Home = () => {
     <div className="App">
       <Navbar />
       <Hero />
-      <About />
+      <About />     
       <Certifications />
       <Products />
       <Shipping />

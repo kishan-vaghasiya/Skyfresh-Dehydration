@@ -15,11 +15,6 @@ const productVariants = {
     categoryName: 'Red Onion',
     image: 'https://img.sanishtech.com/u/228d921ef2f5a7c0c27115077ef7812e.png'
   },
-  'pink-onion-powder': {
-    category: 'pink-onion',
-    categoryName: 'Pink Onion',
-    image: 'https://img.sanishtech.com/u/6d6e7d4ed97b45d86305ab82cca89feb.jpg'
-  },
   'garlic-powder': {
     category: 'garlic',
     categoryName: 'Garlic',
@@ -31,15 +26,13 @@ const getProductVariants = (category) => {
   const categoryMap = {
     'white-onion': 'White',
     'red-onion': 'Red',
-    'pink-onion': 'Pink',
     'garlic': 'Golden Brown'
   };
 
   const colorName = categoryMap[category];
   const imageMap = {
-    'white-onion': 'https://img.sanishtech.com/u/8cba785b78eea5a4c92bedfc8180ca05.jpg',
-    'red-onion': 'https://img.sanishtech.com/u/228d921ef2f5a7c0c27115077ef7812e.png',
-    'pink-onion': 'https://img.sanishtech.com/u/6d6e7d4ed97b45d86305ab82cca89feb.jpg',
+    'white-onion': 'https://img.sanishtech.com/u/90de0a3286d54ded6616da768f843461.png',
+    'red-onion': 'https://img.sanishtech.com/u/70dbbbe574847427d279d18fee62e766.png',
     'garlic': 'https://img.sanishtech.com/u/2efd7c2730497c37e14e814a73ab7ac6.jpg'
   };
 

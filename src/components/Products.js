@@ -5,7 +5,6 @@ import './Products.css';
 
 const myProducts = [
   { id: 'red-onion-powder', name: 'DEHYDRATED RED ONION POWDER', imageKey: 'redonion' },
-  { id: 'pink-onion-powder', name: 'DEHYDRATED PINK ONION POWDER', imageKey: 'pinkonion' },
   { id: 'white-onion-powder', name: 'DEHYDRATED WHITE ONION POWDER', imageKey: 'whiteonion' },
   { id: 'garlic-powder', name: 'DEHYDRATED GARLIC POWDER', imageKey: 'garlic' },
   { id: 'Potato', name: "DEHYDRATED POTATO POWDER", imageKey: 'potato' },
@@ -26,7 +25,7 @@ const Products = () => {
 
   const handleShowMore = () => {
     setVisibleProducts(myProducts.length);
-  };
+  };  
 
   const handleShowLess = () => {
     setVisibleProducts(4);
@@ -63,7 +62,7 @@ const Products = () => {
                 >
                   Learn More
                 </button>
-              </div>
+              </div> 
             </div>
           ))}
         </div>
@@ -71,7 +70,7 @@ const Products = () => {
         {visibleProducts < myProducts.length && (
           <div className="show-more-container">
             <button className="show-more-btn" onClick={handleShowMore}>
-              Show More Products
+              Show More 
             </button>
           </div>
         )}
@@ -79,7 +78,7 @@ const Products = () => {
         {visibleProducts === myProducts.length && (
           <div className="show-more-container">
             <button className="show-more-btn show-less-btn" onClick={handleShowLess}>
-              Show Less
+              Show Less   
             </button>
           </div>
         )}
