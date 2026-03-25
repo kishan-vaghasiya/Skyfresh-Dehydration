@@ -17,7 +17,7 @@ const Contact = () => {
 
             <div className="contact-card-premium">
               <div className="card-icon-badge">👥</div>
-              <h3>Contact Persons</h3>
+              <h3>Contact Person</h3>
               <p>Kishan: +91 70968 80152</p>
               <p>Harsh: +91 70419 00308</p>
             </div>

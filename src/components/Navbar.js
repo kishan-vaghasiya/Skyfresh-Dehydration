@@ -23,6 +23,28 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
+  // Handle navigation to in-page anchors with smooth scrolling.
+  const handleNavClick = (e) => {
+    // If the link is a normal anchor to an id (e.g. #about), smoothly scroll to it.
+    const href = e.currentTarget.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+      const id = href.slice(1);
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Update the URL hash without jumping
+        if (window.history && window.history.pushState) {
+          window.history.pushState(null, '', href);
+        } else {
+          window.location.hash = href;
+        }
+      }
+    }
+    // Close mobile menu after click (if open)
+    closeMobileMenu();
+  };
+
   return (
     <>
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
@@ -31,12 +53,12 @@ const Navbar = () => {
             <img src={imgPath.logo1} alt="SkyfreshDehydration" className="logo" />
           </div>
           <div className="nav-menu">
-            <a href="#home" className="nav-link" onClick={closeMobileMenu}>Home</a>
-            <a href="#about" className="nav-link" onClick={closeMobileMenu}>About</a>
-            <a href="#certifications" className="nav-link" onClick={closeMobileMenu}>Quality</a>
-            <a href="#products" className="nav-link" onClick={closeMobileMenu}>Products</a>
-            <a href="#shipping" className="nav-link" onClick={closeMobileMenu}>Shipping</a>
-            <a href="#contact" className="nav-link" onClick={closeMobileMenu}>Contact</a>
+            <a href="#home" className="nav-link" onClick={handleNavClick}>Home</a>
+            <a href="#about" className="nav-link" onClick={handleNavClick}>About</a>
+            <a href="#certifications" className="nav-link" onClick={handleNavClick}>Quality</a>
+            <a href="#products" className="nav-link" onClick={handleNavClick}>Products</a>
+            <a href="#shipping" className="nav-link" onClick={handleNavClick}>Shipping</a>
+            <a href="#contact" className="nav-link" onClick={handleNavClick}>Contact</a>
             {/* <a href="/brochure.pdf" download className="nav-link" onClick={closeMobileMenu}>Download Brochure</a> */}
           </div>
           <div 
@@ -50,12 +72,12 @@ const Navbar = () => {
         </div>
       </nav>
       <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-        <a href="#home" className="nav-link" onClick={closeMobileMenu}>Home</a>
-        <a href="#about" className="nav-link" onClick={closeMobileMenu}>About</a>
-        <a href="#certifications" className="nav-link" onClick={closeMobileMenu}>Quality</a>
-        <a href="#products" className="nav-link" onClick={closeMobileMenu}>Products</a>
-        <a href="#shipping" className="nav-link" onClick={closeMobileMenu}>Shipping</a>
-        <a href="#contact" className="nav-link" onClick={closeMobileMenu}>Contact</a>
+        <a href="#home" className="nav-link" onClick={handleNavClick}>Home</a>
+        <a href="#about" className="nav-link" onClick={handleNavClick}>About</a>
+        <a href="#certifications" className="nav-link" onClick={handleNavClick}>Quality</a>
+        <a href="#products" className="nav-link" onClick={handleNavClick}>Products</a>
+        <a href="#shipping" className="nav-link" onClick={handleNavClick}>Shipping</a>
+        <a href="#contact" className="nav-link" onClick={handleNavClick}>Contact</a>
         {/* <a href="/brochure.pdf" download className="nav-link" onClick={closeMobileMenu}>Download Brochure</a> */}
       </div>
     </>
