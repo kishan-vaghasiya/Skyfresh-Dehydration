@@ -16,5 +16,19 @@ export const imgPath = {
 }
 
 export const productImages = {
-   RedRedKibble: require('./Product/RedKibbled.png'),
-}
+  RedRedKibble: require('./Product/RedKibbled.png'),
+  RedRedChopped: require('./Product/RedChopped.png'),
+  RedRedMinced: require('./Product/RedMinced.png'),
+  RedRedGranules: require('./Product/RedGranules.png'),
+  RedRedPowder: require('./Product/RedPowder.png'),
+  WhiteKibbled: require('./Product/WhiteKibbled.png'),
+  WhiteChopped: require('./Product/WhiteChopped.png'),
+  WhiteMinced: require('./Product/WhiteMinced.png'),
+  WhiteGranules: require('./Product/WhiteGranules.png'),
+  WhitePowder: require('./Product/WhitePowder.png'),
+  GarlicCloves: require('./Product/GarlicCloves.png'),
+  GarlicChopped: require('./Product/GarlicChopped.png'),
+  GarlicMinced: require('./Product/GarlicMinced.png'),
+  GarlicGranules: require('./Product/GarlicGranules.png'),
+  GarlicPowder: require('./Product/GarlicPowder.png'),
+};
